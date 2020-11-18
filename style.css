@@ -28,6 +28,7 @@ body {
 .image__container .image {
     transition: ease 0.2s;
     cursor: pointer;
+    max-width: 100%;
 }
 
 .image__container .image,
@@ -60,6 +61,19 @@ body {
     background-color: #9e9e9e;
 }
 
+.copy {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    font-size: 0.875rem;
+    color: #121212;
+}
+
+.github-icon,
+.github-link     {
+    color: #a80081;
+}
+
 @keyframes fade{
     0% {
         opacity: 0; 
@@ -69,4 +83,13 @@ body {
         opacity: 1;
         
     }
+}
+
+/* === Responsividade === */
+@media(max-width: 1100px) {
+    .copy {
+        left: 0;
+        right: 0;
+        text-align: center;
+    }    
 }

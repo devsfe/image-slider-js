@@ -7,9 +7,7 @@ const dots = document.getElementsByClassName('dot');
 
 
 
-
-
-//Mudar imagens
+//Atualizar slider
 function updateSlider() {
     for(var images of image) {
         images.classList.remove('image__active');
@@ -19,21 +17,23 @@ function updateSlider() {
     image[slidePosition].classList.add('image__active');    
 }
 
-function moveNextSlide() { 
+
+//Mover imagens
+function moveSlide() { 
     if (slidePosition == totalSlides -1) { 
         slidePosition = 0; 
     } else {
         slidePosition ++;
     }
 
-    setTimeout("moveNextSlide()", time);
+    setTimeout("moveSlide()", time);
 
     updateSlider();
     updateDot();
     
 }
 
-moveNextSlide();
+moveSlide();
 
 //Atualizar posição dos pontos
 function updateDot() {
@@ -43,5 +43,7 @@ function updateDot() {
 
     dots[slidePosition].classList.add('dot-active');
 }
+
+
 
   

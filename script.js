@@ -3,6 +3,7 @@ var time = 3000;
 const image = document.getElementsByClassName('image');
 const totalSlides = image.length;
 const btn = document.getElementById('teste');
+const dots = document.getElementsByClassName('dot');
 
 
 
@@ -28,9 +29,19 @@ function moveNextSlide() {
     setTimeout("moveNextSlide()", time);
 
     updateSlider();
+    updateDot();
     
 }
 
 moveNextSlide();
+
+//Atualizar posição dos pontos
+function updateDot() {
+    for (var dot of dots) {
+        dot.classList.remove('dot-active');
+    }
+
+    dots[slidePosition].classList.add('dot-active');
+}
 
   

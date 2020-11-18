@@ -16,17 +16,18 @@ body {
 }
 
 /* === Estilização === */
-.image__container {
-    display: flex;
+.imgs__container {
+    width: 100%;
+    height: 100vh;   
+    display: flex; 
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .image__container .image {
     transition: ease 0.2s;
-    width: 600px;
-    height: 400px;
-
+    cursor: pointer;
 }
 
 .image__container .image,
@@ -38,6 +39,25 @@ body {
 .image__container .image__active {
     display: block;
     animation: fade 0.4s ease;
+}
+
+.dots__container {
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    border-radius: 20px;
+    margin: 0 0.313em;
+    cursor: pointer;
+    background-color: #1c1c1c;
+    transition: ease .1s;
+}
+
+.dot-active {
+    background-color: #9e9e9e;
 }
 
 @keyframes fade{
